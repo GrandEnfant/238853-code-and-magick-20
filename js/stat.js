@@ -54,24 +54,25 @@ window.renderStatistics = function (ctx, players, times) {
     var getBarSize = (barHeight * times[i]) / maxTime;
     if (players[i] === 'Вы') {
       renderBar(ctx,
-          'rgba(255, 0, 0, 1)',
-          players[i],
-          FIRST_PLAYER_NAME_X + (GAP + BAR_WIDTH) * [i],
-          FIRST_PLAYER_NAME_Y,
-          FIRST_PLAYER_NAME_X + (GAP + BAR_WIDTH) * [i],
-          250 - getBarSize,
-          BAR_WIDTH,
-          getBarSize);
-    } else {
+        'rgba(255, 0, 0, 1)',
+        players[i],
+        FIRST_PLAYER_NAME_X + (GAP + BAR_WIDTH) * [i],
+        FIRST_PLAYER_NAME_Y,
+        FIRST_PLAYER_NAME_X + (GAP + BAR_WIDTH) * [i],
+        250 - getBarSize,
+        BAR_WIDTH,
+        getBarSize);
+    }
+    else {
       renderBar(ctx,
-          getRandomBarColor(10, 99),
-          players[i],
-          FIRST_PLAYER_NAME_X + (GAP + BAR_WIDTH) * [i],
-          FIRST_PLAYER_NAME_Y,
-          FIRST_PLAYER_NAME_X + (GAP + BAR_WIDTH) * [i],
-          250 - getBarSize,
-          BAR_WIDTH,
-          getBarSize);
+        getRandomBarColor(10, 99),
+        players[i],
+        FIRST_PLAYER_NAME_X + (GAP + BAR_WIDTH) * [i],
+        FIRST_PLAYER_NAME_Y,
+        FIRST_PLAYER_NAME_X + (GAP + BAR_WIDTH) * [i],
+        250 - getBarSize,
+        BAR_WIDTH,
+        getBarSize);
     }
   }
 };
